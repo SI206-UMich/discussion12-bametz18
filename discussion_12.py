@@ -33,6 +33,7 @@ def add_employee(filename, cur, conn):
     for dict in json_data:
         cur.execute('INSERT OR IGNORE INTO Employee (employee_id, first_name, last_name, job_id, hire_date, salary) VALUES (?,?,?,?,?,?)', (dict["employee_id"], dict["first_name"], dict["last_name"], dict["job_id"], dict["hire_date"], dict["salary"]))
     conn.commit()
+    # heres a comment
     pass
 
 # TASK 2: GET JOB AND HIRE_DATE INFORMATION
